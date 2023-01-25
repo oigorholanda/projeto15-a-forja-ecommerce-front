@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
+import FrontPage from "./components/FrontPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
 
 export default function App() {
   return (
@@ -10,7 +10,7 @@ export default function App() {
       <BrowserRouter>
       <Header />
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<FrontPage />} />
           <Route path="/signin" element={<componente />} />
           <Route path="/signup" element={<componente />} />
           <Route path="/cart" element={<componente />} />
@@ -25,5 +25,6 @@ export default function App() {
 const ContainerApp = styled.div`
   height: 100%;
   min-height: 100vh;
-  background-color: #38220d;
+  background-color: black; //tan
+
 `;
