@@ -8,7 +8,7 @@ import selo6 from "../images/selo_ebit_kabum_horizontal.png"
 import selo7 from "../images/selo_empresabuscape_horizontal.png"
 
 export default function Footer() {
-    return(<>
+    return(<FixedBottom>
         <FooterMain>
             <FootersDiv>
                 <Title>Institucional</Title>
@@ -52,7 +52,7 @@ export default function Footer() {
         <FooterLower>
             <p>A forja!® é uma marca registrada de A FORJA S.A | CNPJ: 11.111.111/1111-1 | Todos os direitos reservados. Os preços anunciados neste site ou via e-mail promocional podem ser alterados sem prévio <br/> aviso. A FORJA! não é responsável por erros descritivos. Asfotos contidas nesta página são meramente ilustrativas do produto epodem variar de acordo com o fornecedor/lote do fabricante. Este <br/> site trabalha 100% em criptografia SSL.  Clique aqui e veja as políticas de nossa empresa.</p>
         </FooterLower>
-    </>)
+    </FixedBottom>)
 
     }
 
@@ -138,4 +138,11 @@ const FooterBooton = styled.footer`
     align-items:center;
     justify-content:space-evenly;
 
+`
+
+const FixedBottom = styled.div`
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 `

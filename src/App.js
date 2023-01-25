@@ -8,7 +8,6 @@ export default function App() {
   return (
     <ContainerApp>
       <BrowserRouter>
-      <Header />
         <Routes>
           <Route path="/" element={<FrontPage />} />
           <Route path="/signin" element={<componente />} />
@@ -16,7 +15,6 @@ export default function App() {
           <Route path="/cart" element={<componente />} />
           <Route path="/checkout" element={<componente />} />
         </Routes>
-        <Footer/>
       </BrowserRouter>
     </ContainerApp>
   );
