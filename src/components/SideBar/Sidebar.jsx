@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
+import { cor7 } from "../../constants/colors"
 
 
-export default function(prop){
+export default function SideBar(prop){
     return(
         <>
         <Sidebar width={"200px"}>
@@ -13,7 +14,7 @@ export default function(prop){
                 <div>
                     <Link>
                     
-                    login
+                    Minha Conta
                     </Link>
                 </div>
                 <div>
@@ -25,13 +26,13 @@ export default function(prop){
                 <div>
                 <Link>
                     
-                    logout
+                    Pedidos
                     </Link>
                 </div>
                 <div> 
                     <Link>
                     
-                    carrinho
+                    Carrinho
                     </Link>
                 </div>
             </Body>
@@ -42,9 +43,12 @@ export default function(prop){
 
 const Sidebar= styled.div`
     width: ${(props) => props.width};
-    background-color: #a53434;
+    background-color: ${cor7};
     height: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 140px;
     padding-left: 5px;
 `
 const Header= styled.div`
@@ -61,6 +65,6 @@ const Body= styled.div`
     }
     a{
         text-decoration: none;
-        color: #251200;
+        color: tan;
     }
 `

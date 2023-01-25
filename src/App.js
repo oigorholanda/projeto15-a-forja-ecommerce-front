@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
+import Cart from "./components/Cart";
 import FrontPage from "./components/FrontPage";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -10,9 +9,10 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<FrontPage />} />
-          <Route path="/signin" element={<componente />} />
-          <Route path="/signup" element={<componente />} />
-          <Route path="/cart" element={<componente />} />
+          <Route path="/login" element={<componente />} />
+          <Route path="/cadastro" element={<componente />} />
+          <Route path="/produto/:id" element={<componente />} />
+          <Route path="/carrinho" element={<Cart />} />
           <Route path="/checkout" element={<componente />} />
         </Routes>
       </BrowserRouter>

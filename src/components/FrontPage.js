@@ -3,12 +3,11 @@ import Header from "./Header";
 import Products from "./Page/Products";
 
 export default function FrontPage() {
-    return (
+  return (
     <>
-        <Header />
-        <Products/>
-        <Footer />
+      <Header />
+      <Products />
+      <Footer />
     </>
-        
-    )
+  );
 }
