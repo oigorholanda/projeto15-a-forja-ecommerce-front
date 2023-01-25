@@ -1,34 +1,46 @@
+import { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
+import { background, cor1, cor2, cor3, cor4, cor5, cor6, cor7 } from "../constants/colors";
+import Logo from "./Logo";
+import SideMenu from "./SideMenu";
 
 export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <Hcontainer>
-      <img src={logo} alt="" />
-      <div>
-      <h1>A Forja</h1>
-      <p>Sua loja média val</p>
-      </div>
+        <button onClick={() => setMenuOpen(!menuOpen)}>Menu</button>
+            {menuOpen && (<SideMenu />)}
+      <Logo />
+      <Search>      
+        <input type="text" placeholder="busque aqui" />
+        <p>lupa</p>
+      </Search>
 
+      <p>cadatre-se ou faça o login</p>
+      <p>carrinho</p>
     </Hcontainer>
   );
 }
 
 const Hcontainer = styled.div`
-font-family: 'Texturina', serif;
-width: 600px;
-font-size: 28px;
-color: #bd8018;
-display: flex;
-align-items: center;
-margin: auto;
-    img {
-        margin-top: 25px;
-        width: 160px;
-    }
-    h1{
-        font-family: 'Cinzel', serif;
-        font-size: 62px; 
-        margin-bottom: 10px;
+background-color: ${cor7};
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  color: ${cor5};
+`;
+
+const Search = styled.div`
+    width: 25%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    input {
+        width: 90%;
     }
 `
