@@ -4,6 +4,8 @@ import Cart from "./components/Cart";
 import FrontPage from "./components/FrontPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
+import Register from "./components/Register"
 
 export default function App() {
   return (
