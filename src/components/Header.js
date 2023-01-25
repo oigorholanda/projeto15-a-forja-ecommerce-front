@@ -39,6 +39,7 @@ export default function Header() {
 }
 
 const Hcontainer = styled.div`
+
   background-color: ${cor7};
   width: 100%;
   height: 150px;
@@ -67,3 +68,4 @@ const Search = styled.div`
     padding: 7px;
   }
 `;
+
