@@ -16,12 +16,14 @@ export default function Header() {
 
 const Hcontainer = styled.div`
 font-family: 'Texturina', serif;
-width: 600px;
+width: 100%;
 font-size: 28px;
+background-color:#873e16;
 color: #bd8018;
 display: flex;
 align-items: center;
 margin: auto;
+
     img {
         margin-top: 25px;
         width: 160px;
