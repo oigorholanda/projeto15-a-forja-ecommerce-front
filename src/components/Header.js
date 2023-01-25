@@ -1,17 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
-import {
-  background,
-  cor1,
-  cor2,
-  cor3,
-  cor4,
-  cor5,
-  cor6,
-  cor7,
-} from "../constants/colors";
+import { cor4, cor5, cor7} from "../constants/colors";
 import Logo from "./Logo";
-import SideMenu from "./SideMenu";
+import SideBar from "./SideBar/Sidebar";
+import {GoThreeBars, GoSearch} from "react-icons/go"
+import {BiUserCircle, BiCart} from "react-icons/bi"
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,21 +12,26 @@ export default function Header() {
   return (
     <Hcontainer>
       <nav>
-        <button onClick={() => setMenuOpen(!menuOpen)}>Menu</button>
-        {menuOpen && <SideMenu />}
+        <GoThreeBars size={35} onClick={() => setMenuOpen(!menuOpen)}>Menu</GoThreeBars>
+        {menuOpen && <SideBar />}
         <Logo />
       </nav>
 
       <Search>
         <input type="text" placeholder="Procure os produtos" />
-        <p>lupa</p>
+        <GoSearch size={30} onClick={() => {}}/>
       </Search>
 
+      <nav>
+      <BiUserCircle size={35}/>
       <p>
-        Faça seu <a href="">Login</a>
-        <br /> ou <a href="">Cadastre-se</a>
+        Faça seu <a href="#">Login</a>
+        <br /> ou <a href="#">Cadastre-se</a>
       </p>
-      <p>carrinho</p>
+      </nav>
+
+      <BiCart size={40} onClick={() => {}}/>
+
     </Hcontainer>
   );
 }
@@ -48,12 +46,15 @@ const Hcontainer = styled.div`
   justify-content: space-around;
   padding: 10px;
   color: ${cor5};
+  position: fixed;
+  z-index: 2;
   a {
     color: ${cor4};
   }
   nav {
     display: flex;
     align-items: center;
+    gap: 20px;
   }
 `;
 
@@ -63,6 +64,7 @@ const Search = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 10px;
   input {
     width: 90%;
     padding: 7px;

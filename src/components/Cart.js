@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export default function SideMenu() {
+export default function Cart() {
     return (
         <>
         </>
