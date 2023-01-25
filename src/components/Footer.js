@@ -141,8 +141,9 @@ const FooterBooton = styled.footer`
 `
 
 const FixedBottom = styled.div`
+
     width: 100%;
-    position: fixed;
     bottom: 0;
     right: 0;
+    
 `
