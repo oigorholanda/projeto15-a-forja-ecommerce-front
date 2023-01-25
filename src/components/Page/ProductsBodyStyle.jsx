@@ -1,16 +1,14 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
-    
-` 
+
 export const Sections = styled.div`
     
     padding-top: 20px;
     height: 90vh;
-    
+    margin-bottom: 25px;
 `
 
-export const Recommended = styled.div`
+export const SectionName = styled.div`
     
 
 `
