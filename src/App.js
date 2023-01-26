@@ -17,7 +17,7 @@ export default function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/cadastro" element={<Register />} />
           <Route path="/produto/:id" element={<componente />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/carrinho" element={<Cart />} />
           <Route path="/checkout" element={<componente />} />
         </Routes>
         <Footer />
