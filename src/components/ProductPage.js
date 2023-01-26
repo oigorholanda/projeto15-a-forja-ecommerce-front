@@ -1,13 +1,12 @@
 import { useState, useEffect, useContext } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
-import Like from "../images/likes.png"
-import Star from "../images/star.png"
-import YellowStar  from "../images/yellowstar.png"
+import Like from "../assets/likes.png"
+import YellowStar  from "../assets/yellowstar.png"
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext';
 import { BiCart } from "react-icons/bi"
-import second from "../images/404second.png"
+import second from "../assets/404second.png"
 
 export default function ProductPage(props){
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext.js";
-import Go from "../images/G.png"
+import Go from "../assets/G.png"
 
 export default function Signin() {
 
