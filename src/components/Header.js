@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { cor4, cor5, cor7} from "../constants/colors";
 import Logo from "./Logo";
-import SideBar from "./SideBar/Sidebar";
+import SideBar from "./SideBar/Sidebar.js";
 import {GoThreeBars, GoSearch} from "react-icons/go"
 import {BiUserCircle, BiCart} from "react-icons/bi"
 import { useNavigate } from "react-router-dom";
@@ -39,7 +39,7 @@ export default function Header() {
 }
 
 const Hcontainer = styled.div`
-
+  font-family: "Texturina", serif;
   background-color: ${cor7};
   width: 100%;
   height: 150px;
