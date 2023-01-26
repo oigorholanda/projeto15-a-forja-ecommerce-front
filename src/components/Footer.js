@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { cor1, cor2, cor4, cor6, cor7 } from "../constants/colors";
-import selo1 from "../images/103388.png"
-import selo2 from "../images/5847e95fcef1014c0b5e4822.png"
-import selo3 from "../images/5a902dbf7f96951c82922875.png"
-import selo4 from "../images/selo-google-site-seguro.png"
-import selo5 from "../images/selo-ra.png"
-import selo6 from "../images/selo_ebit_kabum_horizontal.png"
-import selo7 from "../images/selo_empresabuscape_horizontal.png"
+import selo1 from "../assets/103388.png"
+import selo2 from "../assets/5847e95fcef1014c0b5e4822.png"
+import selo3 from "../assets/5a902dbf7f96951c82922875.png"
+import selo4 from "../assets/selo-google-site-seguro.png"
+import selo5 from "../assets/selo-ra.png"
+import selo6 from "../assets/selo_ebit_kabum_horizontal.png"
+import selo7 from "../assets/selo_empresabuscape_horizontal.png"
 
 export default function Footer() {
     return(<>
@@ -127,6 +127,9 @@ const Pages = styled.p `
     font-style: normal;
     font-weight: 700;
     margin-bottom:5px;
+    &:hover{
+        cursor: pointer
+    }
 
 `
 const Pages2 = styled.p`

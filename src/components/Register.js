@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
-import Go from "../images/G.png"
+import Go from "../assets/G.png"
 
 export default function Signup() {
 
@@ -31,7 +31,7 @@ export default function Signup() {
         <>
         <Background>
         <Form autoComplete="off">
-          <LogoA width={"150px"} src={logo} alt="Logo"></LogoA>
+          <LogoA width={"150px"} src={logo} alt="Logo" onClick={() => navigate("/")}></LogoA>
                 <ConteinerTop>
                     <LoginText>Registro</LoginText>
                     <LoginDescription>Coloque seus dados para se cadastrar no site.</LoginDescription>
@@ -57,7 +57,7 @@ export default function Signup() {
                         <Googletext onClick={emBreve}>Registre com o Google</Googletext>
                     </GoogleContainer>
                 </GoogleBox>
-                <Link to="/signin">
+                <Link to="/login">
                 <RegisterBox>Já tem uma conta?<span>Logue!</span></RegisterBox>
                 </Link>
                 </ContainerBot>
@@ -80,17 +80,21 @@ const Form = styled.form`
 `;
 
 const Background = styled.main`
-    height:100%;
+background-color: black;
+    height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     flex-direction:column;
-    margin-top:50px;
+
 `
 const LogoA = styled.img`
-    width:250px;
-    margin-top:-15px;
-    margin-bottom:20px;
+  background-color: #ffa375;
+  border-radius: 25px;
+  width: 200px;
+  height: 200px;
+  margin-top: -50px;
+  margin-bottom: 50px;
 `
 const ConteinerTop = styled.div`
     display: flex;
@@ -230,7 +234,7 @@ const Entrar = styled.button`
     p{
     font-family: 'Cinzel';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     line-height: 20px;
     color:black !important;
@@ -249,10 +253,10 @@ const RegisterBox = styled.p`
     height: 21px;
     left: 24px;
     top: 694px;
-    font-family: 'Cinzel';
+    font-family: 'Texturina';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 24px;
     text-align: center;
     color: #deb876;

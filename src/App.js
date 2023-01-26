@@ -4,6 +4,7 @@ import Cart from "./components/Cart";
 import FrontPage from "./components/FrontPage";
 import Login from "./components/Login";
 import Register from "./components/Register"
+import { cor1 } from "./constants/colors";
 
 export default function App() {
   return (
@@ -25,6 +26,6 @@ export default function App() {
 const ContainerApp = styled.div`
   height: 100%;
   min-height: 100vh;
-  background-color: black; //tan
+  background-color: ${cor1}; //tan, black
 
 `;
