@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { cor4, cor5, cor7} from "../constants/colors";
 import Logo from "./Logo";
-import SideBar from "./SideBar/Sidebar";
+import SideBar from "./Sidebar";
 import {GoThreeBars, GoSearch} from "react-icons/go"
 import {BiUserCircle, BiCart} from "react-icons/bi"
 import { useNavigate } from "react-router-dom";
@@ -27,8 +27,8 @@ export default function Header() {
       <nav>
       <BiUserCircle size={35} className="icons" onClick={() => navigate("/login")}/>
       <p>
-        Faça seu <a href="/login">Login</a>
-        <br /> ou <a href="/cadastro">Cadastre-se</a>
+        Faça seu <span onClick={() => navigate("/login")}>Login</span>
+        <br /> ou <span onClick={() => navigate("/cadastro")}>Cadastre-se</span>
       </p>
       </nav>
 
@@ -48,8 +48,12 @@ const Hcontainer = styled.div`
   justify-content: space-around;
   padding: 10px;
   color: ${cor5};
-  a {
-    color: ${cor4};
+  span {
+    text-decoration: underline;
+    &:hover {
+    cursor: pointer;
+    color: ${cor4}
+    }
   }
   nav {
     display: flex;

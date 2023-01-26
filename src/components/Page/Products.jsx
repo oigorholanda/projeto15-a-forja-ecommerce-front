@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Container, Sections, Recommended, Section, Banner } from "./ProductsBodyStyle"
 import Product from "../Product/Product"
-import Sidebar from "../SideBar/Sidebar"
+import Sidebar from "../Sidebar"
 
 
 export default function(){
