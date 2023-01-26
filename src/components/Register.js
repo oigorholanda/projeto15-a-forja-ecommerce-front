@@ -19,7 +19,7 @@ export default function Signup() {
           return alert("Preencha os campos corretamente");
         }
         console.log(form)
-          navigate("/signin");
+          navigate("/login");
     }
 
     function emBreve(){
@@ -55,7 +55,7 @@ export default function Signup() {
                         <Googletext onClick={emBreve}>Registre com o Google</Googletext>
                     </GoogleContainer>
                 </GoogleBox>
-                <Link to="/signin">
+                <Link to="/login">
                 <RegisterBox>Já tem uma conta?<span>Logue!</span></RegisterBox>
                 </Link>
                 </ContainerBot>
