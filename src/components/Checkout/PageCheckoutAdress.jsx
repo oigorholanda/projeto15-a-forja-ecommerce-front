@@ -47,10 +47,10 @@ export default function App() {
     <SubmitBtn> <input value="Finalizar pedido" style={{background:'#ff4791', color:'white'}} type="submit" /></SubmitBtn>
     </form>
         </div>
-         {/* <CheckoutConfirm >
+         <CheckoutConfirm >
             <p>Tem certeza de que deseja assinar o plano  (R$ )</p>
             <button style={{background:'#cecece'}} onClick={() => setDisplay('none')}>NAO</button> <button onClick={() => onSubmit(0)} style={{background:'#ff4791'}}>SIM</button>
-         </CheckoutConfirm> */}
+         </CheckoutConfirm>
 
         </Container>
         </>
