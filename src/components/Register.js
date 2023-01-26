@@ -79,7 +79,6 @@ const Form = styled.form`
 
 const Background = styled.main`
 
-    height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -118,7 +117,7 @@ const LoginText = styled.p`
 
 const LoginDescription = styled.p`
 
-    font-family: 'Texturina';
+    font-family: "Texturina", serif;
     font-style: normal;
     font-weight: 400;
     color:white;
@@ -248,7 +247,7 @@ const RegisterBox = styled.p`
     height: 21px;
     left: 24px;
     top: 694px;
-    font-family: 'Texturina';
+    font-family: "Texturina", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
