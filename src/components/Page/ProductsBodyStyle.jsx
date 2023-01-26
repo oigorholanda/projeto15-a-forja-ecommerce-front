@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { cor2, cor3 } from "../../../constants/colors"
+import { cor2, cor3 } from "../../constants/colors"
 
 export const Sections = styled.div`
     
