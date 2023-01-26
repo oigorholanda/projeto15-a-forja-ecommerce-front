@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
 import Go from "../assets/G.png"
 
 export default function Signup() {
@@ -20,7 +19,7 @@ export default function Signup() {
           return alert("Preencha os campos corretamente");
         }
         console.log(form)
-          navigate("/signin");
+          navigate("/login");
     }
 
     function emBreve(){
@@ -31,7 +30,6 @@ export default function Signup() {
         <>
         <Background>
         <Form autoComplete="off">
-          <LogoA width={"150px"} src={logo} alt="Logo" onClick={() => navigate("/")}></LogoA>
                 <ConteinerTop>
                     <LoginText>Registro</LoginText>
                     <LoginDescription>Coloque seus dados para se cadastrar no site.</LoginDescription>
@@ -80,23 +78,18 @@ const Form = styled.form`
 `;
 
 const Background = styled.main`
-background-color: black;
+
     height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     flex-direction:column;
+    margin-top:50px;
 
 `
-const LogoA = styled.img`
-  background-color: #ffa375;
-  border-radius: 25px;
-  width: 200px;
-  height: 200px;
-  margin-top: -50px;
-  margin-bottom: 50px;
-`
+
 const ConteinerTop = styled.div`
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,12 +98,14 @@ const ConteinerTop = styled.div`
     gap: 8px;
     width: 330px;
     height: 71px;
+
 `
 const LoginText = styled.p`
 
     font-family: 'Cinzel';
     font-style: normal;
     font-weight: 700;
+    margin-left:80px;
     font-size: 32px;
     line-height: 39px;
     letter-spacing: 0.01em;

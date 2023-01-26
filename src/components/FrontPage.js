@@ -5,9 +5,7 @@ import Products from "./Page/Products";
 export default function FrontPage() {
   return (
     <>
-      <Header />
       <Products />
-      <Footer />
     </>
   );
 }
