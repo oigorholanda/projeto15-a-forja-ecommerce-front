@@ -14,10 +14,10 @@ export default function App() {
       <Header />
         <Routes>
           <Route path="/" element={<FrontPage />} />
-          <Route path="/signin" element={<Login/>} />
-          <Route path="/signup" element={<Register />} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/cadastro" element={<Register />} />
           <Route path="/produto/:id" element={<componente />} />
-          <Route path="/cart" element={<componente />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<componente />} />
         </Routes>
         <Footer />
