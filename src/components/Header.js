@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { cor4, cor5, cor7} from "../constants/colors";
 import Logo from "./Logo";
-import SideBar from "./SideBar/Sidebar.js";
+import SideBar from "./SideBar/Sidebar";
 import {GoThreeBars, GoSearch} from "react-icons/go"
 import {BiUserCircle, BiCart} from "react-icons/bi"
 import { useNavigate } from "react-router-dom";
