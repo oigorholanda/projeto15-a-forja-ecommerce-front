@@ -39,7 +39,7 @@ export default function Header() {
 }
 
 const Hcontainer = styled.div`
-
+  font-family: "Texturina", serif;
   background-color: ${cor7};
   width: 100%;
   height: 150px;

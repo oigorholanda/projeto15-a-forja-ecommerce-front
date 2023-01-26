@@ -12,7 +12,7 @@ return(
 
     <>
 
-        {/* <Sidebar/> */}
+        
         <Sections>
             <Section>
             <Product img={"https://stores.renstore.com/product_images/uploaded_images/hose-with-chamfron-copy.jpg"} name={"cavalo manco"} price={0.4}/>  
