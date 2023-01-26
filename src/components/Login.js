@@ -87,7 +87,7 @@ const Form = styled.form`
 
 const Background = styled.main`
 
-    height:100%;
+    height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -326,7 +326,7 @@ const Entrar = styled.button`
     p{
     font-family: 'Cinzel';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     line-height: 20px;
     color:black !important;
@@ -395,10 +395,10 @@ const RegisterBox = styled.p`
     height: 21px;
     left: 24px;
     top: 694px;
-    font-family: 'Cinzel';
+    font-family: 'Texturina';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 24px;
     text-align: center;
     color: #deb876;
