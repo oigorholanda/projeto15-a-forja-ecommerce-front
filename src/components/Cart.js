@@ -5,9 +5,9 @@ import Header from "./Header"
 export default function Cart() {
     return (
         <ConteinerCart>
-        <Header/>
+        
         Seu carrinho
-        <Footer/>
+        
         </ConteinerCart>
     )
 }
