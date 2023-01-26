@@ -5,7 +5,8 @@ export const Sections = styled.div`
     
     padding-top: 170px;
     height: 90vh;
-    margin-bottom: 200px;
+    margin-bottom: 25px;
+    height: 100%;
 `
 
 export const SectionName = styled.div`

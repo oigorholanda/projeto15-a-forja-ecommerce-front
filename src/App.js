@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import Cart from "./components/Cart";
+import PageCheckout from "./components/Checkout/PageCheckoutAdress";
 import FrontPage from "./components/FrontPage";
 
 export default function App() {
@@ -13,7 +14,8 @@ export default function App() {
           <Route path="/cadastro" element={<componente />} />
           <Route path="/produto/:id" element={<componente />} />
           <Route path="/carrinho" element={<Cart />} />
-          <Route path="/checkout" element={<componente />} />
+          <Route path="/checkout" element={<PageCheckout/>} />
+          
         </Routes>
       </BrowserRouter>
     </ContainerApp>
