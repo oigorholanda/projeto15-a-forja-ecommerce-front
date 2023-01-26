@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext.js";
-import logo from "../assets/logo.png"
 import Go from "../images/G.png"
 
 export default function Signin() {
@@ -35,7 +34,6 @@ export default function Signin() {
         <>
          <Background>
           <Form>
-                <LogoA width={"150px"} src={logo} alt="Logo"></LogoA>
                 <ConteinerTop>
                     <LoginText>Login</LoginText>
                     <LoginDescription>Coloque sua senha e login para entrar no site.</LoginDescription>
@@ -84,7 +82,6 @@ const Form = styled.form`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top:30px;
 
 `;
 
@@ -97,11 +94,7 @@ const Background = styled.main`
     flex-direction:column;
     margin-top:50px;
 `
-const LogoA = styled.img`
-    width:250px;
-    margin-top:-55px;
 
-`
 
 const ConteinerTop = styled.div`
 
@@ -120,6 +113,7 @@ const LoginText = styled.p`
     font-family: 'Cinzel';
     font-style: normal;
     font-weight: 700;
+    margin-left:100px;
     font-size: 32px;
     line-height: 39px;
     letter-spacing: 0.01em;

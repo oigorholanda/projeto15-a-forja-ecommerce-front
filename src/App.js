@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Register from "./components/Register"
+import ProductPage  from "./components/ProductPage"
 
 export default function App() {
   return (
@@ -16,8 +17,8 @@ export default function App() {
           <Route path="/" element={<FrontPage />} />
           <Route path="/signin" element={<Login/>} />
           <Route path="/signup" element={<Register />} />
-          <Route path="/produto/:id" element={<componente />} />
-          <Route path="/cart" element={<componente />} />
+          <Route path="/product" element={<ProductPage/>} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<componente />} />
         </Routes>
         <Footer />

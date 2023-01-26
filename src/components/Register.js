@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
 import Go from "../images/G.png"
 
 export default function Signup() {
@@ -31,7 +30,6 @@ export default function Signup() {
         <>
         <Background>
         <Form autoComplete="off">
-          <LogoA width={"150px"} src={logo} alt="Logo"></LogoA>
                 <ConteinerTop>
                     <LoginText>Registro</LoginText>
                     <LoginDescription>Coloque seus dados para se cadastrar no site.</LoginDescription>
@@ -80,19 +78,18 @@ const Form = styled.form`
 `;
 
 const Background = styled.main`
+
     height:100%;
     display:flex;
     align-items:center;
     justify-content:center;
     flex-direction:column;
     margin-top:50px;
+
 `
-const LogoA = styled.img`
-    width:250px;
-    margin-top:-15px;
-    margin-bottom:20px;
-`
+
 const ConteinerTop = styled.div`
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,12 +98,14 @@ const ConteinerTop = styled.div`
     gap: 8px;
     width: 330px;
     height: 71px;
+
 `
 const LoginText = styled.p`
 
     font-family: 'Cinzel';
     font-style: normal;
     font-weight: 700;
+    margin-left:80px;
     font-size: 32px;
     line-height: 39px;
     letter-spacing: 0.01em;
