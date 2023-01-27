@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { signUp } from "../services/Auth.js";
 import Go from "../assets/G.png"
 
 export default function Signup() {
@@ -11,20 +12,31 @@ export default function Signup() {
     function handleForm({ value, name }) {
       setForm({...form,[name]: value,});
     }
-
-    function handleSendForm (event) {
-        event.preventDefault();
-        console.log(form)
-        if(!form.name || !form.email || !form.password){
-          return alert("Preencha os campos corretamente");
+  
+      function handleSendForm (event) {
+          event.preventDefault();
+          console.log(form)
+          if(!form.name || !form.email || !form.password){
+            return alert("Preencha os campos corretamente");
+          }
+          console.log(form)
+          signUp(form).then((res) => {
+            console.log(res)
+            alert("Registrado com sucesso!")
+            navigate("/signin");
+          })
+          .catch((err) => {
+           err.response.data.map((e) => {
+            alert("Erro ao registrar o usuario!"); 
+           return console.log(e)
+           })
+          })
         }
-        console.log(form)
-          navigate("/login");
-    }
 
-    function emBreve(){
-        return alert("Em breve...")
-    }
+        function emBreve(){
+            return alert("Em breve...")
+          }
+          
 
     return (
         <>
@@ -79,6 +91,7 @@ const Form = styled.form`
 
 const Background = styled.main`
 
+    height:100%;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -117,7 +130,7 @@ const LoginText = styled.p`
 
 const LoginDescription = styled.p`
 
-    font-family: "Texturina", serif;
+    font-family: 'Texturina';
     font-style: normal;
     font-weight: 400;
     color:white;
@@ -247,7 +260,7 @@ const RegisterBox = styled.p`
     height: 21px;
     left: 24px;
     top: 694px;
-    font-family: "Texturina", serif;
+    font-family: 'Texturina';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;

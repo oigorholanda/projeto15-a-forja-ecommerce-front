@@ -34,6 +34,7 @@ export default function App() {
 }
 
 const ContainerApp = styled.div`
+
   height: 100%;
   min-height: 100vh;
   background-color: black; 
