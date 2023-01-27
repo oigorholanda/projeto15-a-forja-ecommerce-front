@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
-
-
 import styled from "styled-components";
-
 import { useForm } from "react-hook-form";
-
-
-
-
-
 
 
 export default function App() {
@@ -49,7 +41,7 @@ export default function App() {
         </div>
          <CheckoutConfirm >
             <p>Tem certeza de que deseja assinar o plano  (R$ )</p>
-            <button style={{background:'#cecece'}} onClick={() => setDisplay('none')}>NAO</button> <button onClick={() => onSubmit(0)} style={{background:'#ff4791'}}>SIM</button>
+            {/* <button style={{background:'#cecece'}} onClick={() => setDisplay('none')}>NAO</button> <button onClick={() => onSubmit(0)} style={{background:'#ff4791'}}>SIM</button> */}
          </CheckoutConfirm>
 
         </Container>
