@@ -5,7 +5,6 @@ import FrontPage from "./components/FrontPage";
 import Login from "./components/Login";
 import Register from "./components/Register"
 import ProductPage  from "./components/ProductPage"
-import { cor1 } from "./constants/colors";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
