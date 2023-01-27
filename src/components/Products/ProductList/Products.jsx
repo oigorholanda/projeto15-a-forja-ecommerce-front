@@ -1,4 +1,4 @@
-import { Sections, Recommended, Section, SectionName, ProductList } from "../../Page/ProductsBodyStyle"
+import { Sections, Recommended, Section, SectionName, ProductList } from "./ProductsBodyStyle"
 import Product from "../Product/Product"
 
 
