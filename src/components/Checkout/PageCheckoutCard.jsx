@@ -1,11 +1,14 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container, Title, Description, LowerContainer, SubmitBtn} from "./CheckoutStyles";
 
 
 export default function App() {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const navigate = useNavigate()
+    const onSubmit = data => {
+        navigate("/checkout-adress")
+    };
   
     return(
         <>
@@ -39,11 +42,6 @@ export default function App() {
     <SubmitBtn> <input value="Cadastrar" style={{background:'#ff4791', color:'white'}} type="submit" /></SubmitBtn>
     </form>
         </div>
-         {/* <CheckoutConfirm >
-            <p>Tem certeza de que deseja assinar o plano  (R$ )</p>
-            <button style={{background:'#cecece'}} onClick={() => setDisplay('none')}>NAO</button> <button onClick={() => onSubmit(0)} style={{background:'#ff4791'}}>SIM</button>
-         </CheckoutConfirm> */}
-
         </Container>
         </>
     )}

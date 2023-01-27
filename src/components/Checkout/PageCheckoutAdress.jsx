@@ -41,7 +41,8 @@ export default function App() {
     </form>
         </div>
          <CheckoutConfirm >
-            <p>Tem certeza de que deseja assinar o plano  (R$ )</p>
+            <p> Você acaba de concluir sua compra no valor de (R$ ).</p>
+            <p> Em breve seu pedido será enviado. </p>
             {/* <button style={{background:'#cecece'}} onClick={() => setDisplay('none')}>NAO</button> <button onClick={() => onSubmit(0)} style={{background:'#ff4791'}}>SIM</button> */}
          </CheckoutConfirm>
 
