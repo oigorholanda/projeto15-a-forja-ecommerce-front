@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import Cart from "./components/Cart";
+import PageCheckout from "./components/Checkout/PageCheckoutAdress";
 import Products from "./components/Page/Products";
 import Login from "./components/Login";
 import Register from "./components/Register"
@@ -20,7 +21,8 @@ export default function App() {
           <Route path="/cadastro" element={<Register />} />
           <Route path="/produto/:id" element={<ProductPage/>} />
           <Route path="/carrinho" element={<Cart />} />
-          <Route path="/checkout" element={<componente />} />
+          <Route path="/checkout" element={<PageCheckout/>} />
+          
           <Route path="/404" element={<Ops404 />} />
         </Routes>
         <Footer />

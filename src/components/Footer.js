@@ -95,7 +95,8 @@ const FooterMain = styled.footer`
   gap: 20%;
   padding: 18px 5px;
 
-`;
+`
+
 
 const FootersDiv = styled.div`
   width: 200px;
