@@ -4,7 +4,7 @@ import {Product, ProductDescription, ProductName, ProductPrice} from "./ProductS
 
 export default function product(prop){
     return(
-        <Link style={{textDecoration:'none'}}>
+        <Link to="/produto/1" style={{textDecoration:'none'}}>
             <Product>
                         <img src={prop.img} alt="" />
                         <ProductDescription>

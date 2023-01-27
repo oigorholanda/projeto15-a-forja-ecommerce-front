@@ -19,7 +19,7 @@ export default function ProductPage(props){
     console.log(location)
 
     function CardAdd(){
-            navigate("/cart")
+            navigate("/carrinho")
             return 
         }
 
