@@ -72,7 +72,7 @@ export default function Signin() {
                         <Googletext onClick={emBreve}>Logue com o Google</Googletext>
                     </GoogleContainer>
                 </GoogleBox>
-                <Link className="link" to="/signup">
+                <Link className="link" to="/cadastro">
                 <RegisterBox>Não tem uma conta?<span>  Cadastre-se</span></RegisterBox>
                 </Link>
                 </ContainerBot>
@@ -95,7 +95,6 @@ const Form = styled.form`
 
 const Background = styled.main`
 
-    height:100%;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -135,7 +134,7 @@ const LoginText = styled.p`
 
 const LoginDescription = styled.p`
 
-    font-family: 'Texturina';
+    font-family: "Texturina", serif;
     font-style: normal;
     font-weight: 400;
     color:white;
@@ -149,13 +148,13 @@ const LoginDescription = styled.p`
 
 const ContainerBot = styled.div`
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 0px;
-        gap: 8px;
-        margin-top:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    margin-top:30px;
 
 `
 
@@ -290,16 +289,16 @@ const RememberMeText = styled.p`
 
 const Forgot = styled.p`
 
-    font-family: 'Cinzel';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    color: #deb876;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    cursor: pointer;
+  font-family: "Texturina", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #deb876;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  cursor: pointer;
 
 `
 const Or = styled.p`
@@ -334,7 +333,7 @@ const Entrar = styled.button`
     p{
     font-family: 'Cinzel';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     line-height: 20px;
     color:black !important;
@@ -403,10 +402,10 @@ const RegisterBox = styled.p`
     height: 21px;
     left: 24px;
     top: 694px;
-    font-family: 'Cinzel';
+    font-family: "Texturina", serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 24px;
     text-align: center;
     color: #deb876;

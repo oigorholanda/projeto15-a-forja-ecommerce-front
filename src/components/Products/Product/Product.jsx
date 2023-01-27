@@ -12,7 +12,7 @@ export default function product(prop){
                                 <p>{prop.name}</p>
                             </ProductName>
                             <ProductPrice>
-                                <p>{prop.price}</p>
+                                <p>oz. {prop.price}</p>
                             </ProductPrice>
                         </ProductDescription>
                         

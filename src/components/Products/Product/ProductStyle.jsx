@@ -1,9 +1,10 @@
 import styled from "styled-components"
+import { cor3, cor5} from "../../../constants/colors"
 
 export const Product = styled.div`
     width: 100px;
     height: 170px;
-    background-color: blue;
+    background-color: ${cor3};
     padding: 5px;
     margin-right: 10px;
     box-sizing: border-box;
@@ -18,7 +19,7 @@ export const ProductDescription = styled.div`
         width: 90px;
         margin-top: 5px;
         height: 33px;
-        background-color: aqua;
+        
         
         
         p{
@@ -33,10 +34,12 @@ export const ProductName = styled.div`
     
     p{
     text-overflow: ellipsis;
+    color:${cor5}
     }
 `
 
 export const ProductPrice = styled.div`
     height: 10px;
     margin-top: 3px;
+    color:${cor5}
 `
