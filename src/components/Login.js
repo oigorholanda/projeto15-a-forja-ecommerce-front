@@ -2,16 +2,16 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
+import { signIn } from "../services/Auth.js";
 import { AuthContext } from "../contexts/AuthContext.js";
 import Go from "../assets/G.png"
 
 export default function Signin() {
 
     const [form, setForm] = useState({});
-    const { setToken,setUser } = useContext(AuthContext);
+    const { finishingCart,setToken } = useContext(AuthContext);
 
   const navigate = useNavigate();
-
 
   function handleForm({ value, name }) {
     setForm({...form,[name]: value,});
@@ -22,7 +22,15 @@ export default function Signin() {
     if(!form.email || !form.password){
       return alert("Preencha os campos corretamente");
     }
-      navigate("/");
+
+    signIn(form).then((res) => {
+      if(res.data === "Unauthorized") return alert("Verifique os dados inseridos")
+     setToken(res.data.token);
+     if(finishingCart === true){
+        return navigate("/checkout");
+     }
+      return navigate("/");
+    })
   }
 
   function emBreve(){
