@@ -28,14 +28,14 @@ export default function App() {
         {errors.email && <div><h3>Insira seu Email</h3></div>}
 
         <LowerContainer>
-        <div><input placeholder="Número da casa" id='number' name="number" type="number" {...register("cardNumber", {required:true})} /></div>
+        <div><input placeholder="Número da casa" id='number' name="number" type="number" {...register("houseNumber", {required:true})} /></div>
         {errors.email && <div><h3>Digite Seu CPF</h3></div>}
 
-        <div><input placeholder="cep" id='number' name="number" type="number" {...register("securityNumber", {required:true , valueAsNumber:true})} /></div>
+        <div><input placeholder="cep" id='number' name="number" type="number" {...register("postalCode", {required:true , valueAsNumber:true})} /></div>
         {errors.email && <div><h3>Insira seu Cep</h3></div>}
         </LowerContainer>
         
-        <div><input id='pwd' name="pwd" placeholder="Ponto de referencia" type="text" {...register("expirationDate", { required: true })} /></div>
+        <div><input id='pwd' name="pwd" placeholder="Complemento" type="text" {...register("details", { required: true })} /></div>
         {errors.password && <div>Digite sua senha correta!</div>}
     <SubmitBtn> <input value="Finalizar pedido" style={{background:'#ff4791', color:'white'}} type="submit" /></SubmitBtn>
     </form>
