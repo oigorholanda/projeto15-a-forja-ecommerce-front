@@ -11,6 +11,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
+  window.scrollTo(0, 0);
+
   return (
     <Hcontainer>
       <nav>
