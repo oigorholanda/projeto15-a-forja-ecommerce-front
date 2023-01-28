@@ -13,6 +13,8 @@ export default function Ops404() {
 }
 
 const Main = styled.div`
+
+cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
