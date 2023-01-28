@@ -6,9 +6,10 @@ function AuthProvider({children}){
 
     const [Token, setToken] = useState({});
     const [finishingCart, setFinishingCart] = useState({});
-
+    const [idClicked, setClicked] = useState()
+    
     return(
-        <AuthContext.Provider value={{Token,setToken,finishingCart, setFinishingCart}}>
+        <AuthContext.Provider value={{Token,setToken,finishingCart, setFinishingCart,idClicked, setClicked}}>
             {children}
         </AuthContext.Provider>
     )

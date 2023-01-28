@@ -1,44 +1,47 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom';
 import Like from "../assets/likes.png"
 import YellowStar  from "../assets/yellowstar.png"
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../contexts/AuthContext';
 import { BiCart } from "react-icons/bi"
 import second from "../assets/404second.png"
+import { ClickProduct } from "../services/ProductsRoute.js"
 
 export default function ProductPage(props){
 
     const [Price, setPrice] = useState("100")
     const [Image, setImage] = useState("https://media.istockphoto.com/id/924949200/vector/404-error-page-or-file-not-found-icon.jpg?s=170667a&w=0&k=20&c=gsR5TEhp1tfg-qj1DAYdghj9NfM0ldfNEMJUfAzHGtU=")
     const [Name, setName] = useState("404 NOT FOUND")
-    const location = useLocation()
-    
+    const [Descri, setDescri] = useState("404")
+    const [Catego, setCatego] = useState("404")
+
     let navigate = useNavigate();
-    console.log(location)
+
+    const catchProducts = async () => {
+
+        const promisse = await ClickProduct();
+        console.log(promisse.data) 
+        setPrice(promisse.data.price)
+        setImage(promisse.data.picture)
+        setName(promisse.data.name) 
+        setDescri(promisse.data.description)
+        setCatego(promisse.data.category)
+    }
+
+        catchProducts()
 
     function CardAdd(){
             navigate("/carrinho")
             return 
         }
 
-    useEffect(()=>{
-
-        if(location.state){
-            setPrice(location.state.preco)
-            setName(location.state.nome)
-            setImage(location.state.imagem)
-            console.log(setPrice)
-        }
-    },[])
 
     return(
         <>
         <Main>
              <ConteinerAll>
                 <ConterinerLeft>
-                    <IniDesc>{Name}</IniDesc>
+                    <IniDesc>{Catego} / {Name}</IniDesc>
                     <PicProduct src={Image}/>
                     <LowBarLike src={Like}/>
                     </ConterinerLeft>
@@ -61,7 +64,7 @@ export default function ProductPage(props){
                 </ConteinerRight>
              </ConteinerAll>
              <Description>Descrição do produto</Description>
-             <img src={second} alt="404"/>
+             <IniDesc>{Descri}</IniDesc>
         </Main>
         </>
     )
