@@ -86,7 +86,7 @@ export default function Cart() {
               <em>1000</em>
             </div>
             <section>
-              <Link to="/checkout-card" className="finalize">
+              <Link to="/checkout-adress" className="finalize">
                 Finalizar compra
               </Link>
               <Link to="/">

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+
+
 export const Container = styled.div`
     color: white;
     font-weight: 700;
@@ -74,7 +76,7 @@ export const CheckoutConfirm = styled.div`
 `
 
 export const Title = styled.div `
-    width: 90px;
+    width: 100px;
     position: relative;
     top:80px;
     
@@ -95,7 +97,6 @@ export const Description = styled.div`
     width: 303px;
     position: relative;
     top: 60px;
-    right: 13px;
     div{
         margin-top: 20px;
     }

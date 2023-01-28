@@ -48,6 +48,9 @@ table {
 * {
     box-sizing: border-box;
 }
+body{
+	font-family: 'Cinzel';
+}
 `;
 
 export default GlobalStyle;
