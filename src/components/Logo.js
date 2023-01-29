@@ -1,18 +1,19 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { cor1, cor2, cor3, cor4, cor5, cor6 } from "../constants/colors";
 
 export default function Logo({ size }) {
-  const navigate = useNavigate();
   return (
-    <LogoContainer tamanho={`${size}px`} onClick={() => navigate("/")}>
+    <Link style={{textDecoration:"none"}} to={"/"}>
+    <LogoContainer tamanho={`${size}px`}>
       <img src={logo} alt="" />
       <div>
         <h1>A Forja</h1>
         <p>Sua loja média val</p>
       </div>
     </LogoContainer>
+    </Link>
   );
 }
 
@@ -26,7 +27,6 @@ const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
   img {
     width: 10vw;
     max-width: 35%;
