@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import styled from 'styled-components';
 import Like from "../../assets/likes.png"
 import YellowStar  from "../../assets/yellowstar.png"
 import { useNavigate } from 'react-router-dom';
 import { BiCart } from "react-icons/bi"
 import second from "../../assets/404second.png"
-import { ClickProduct } from "../../services/ProductsRoute.js"
+import { ClickProduct, SelectedProduct } from "../../services/ProductsRoute.js"
+import { AuthContext } from '../../contexts/AuthContext';
+import axios from 'axios';
 
 export default function ProductPage(props){
 
@@ -14,8 +16,10 @@ export default function ProductPage(props){
     const [Name, setName] = useState("404 NOT FOUND")
     const [Descri, setDescri] = useState("404")
     const [Catego, setCatego] = useState("404")
-
-    let navigate = useNavigate();
+    const [ID, setID] = useState()
+    // const {Token } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const url = process.env.REACT_APP_API_URL
 
     const catchProducts = async () => {
 
@@ -26,14 +30,29 @@ export default function ProductPage(props){
         setName(promisse.data.name) 
         setDescri(promisse.data.description)
         setCatego(promisse.data.category)
+        setID(promisse.data._id)
     }
 
-        catchProducts()
+    catchProducts()
 
-    function CardAdd(){
-            navigate("/carrinho")
-            return 
+    async function CartAdd(){
+    const body = {id: ID}
+    const Token = "5702bdae-8c1b-4c17-a888-d6b968bc2178"
+    console.log(body);
+    const config = {
+        headers: {Authorization: Token}
         }
+            
+        
+        const promisse = axios.post(`${url}/cart`, body, config)
+        promisse.then(() => navigate("/carrinho"))
+        promisse.catch((error) => {
+            console.log(error.response)
+            if (error.response.status === 401) {navigate("/login")} 
+            return error.response;
+        });
+        return 
+    }
 
 
     return(
@@ -60,7 +79,7 @@ export default function ProductPage(props){
                         <img src={YellowStar}/>
                         <img src={YellowStar}/>
                     </ConteinerStars>
-                    <BuyButton onClick={CardAdd}><BiCart size={40} onClick={() => {}}/>COMPRAR</BuyButton>
+                    <BuyButton onClick={CartAdd}><BiCart size={40}/>COMPRAR</BuyButton>
                 </ConteinerRight>
              </ConteinerAll>
              <Description>Descrição do produto</Description>
