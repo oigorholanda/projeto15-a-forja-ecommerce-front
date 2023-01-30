@@ -27,8 +27,8 @@ return(
     <>
     <Mainframe>
     <Banner src={BannerFrontal} alt="banner frontal"/>
-        <Sections>
-        <Tag>CAPACETES</Tag>
+        <Sections id="armaduras">
+        <Tag>Armaduras</Tag>
             <Section>  
                 <ProductList>
                 {Itens.map((item,index) => {
@@ -40,7 +40,7 @@ return(
             </Section>
         </Sections>
 
-        <Sections>
+        <Sections id="machados">
         <Tag>Machados</Tag>
             <Section>  
                 <ProductList>
@@ -53,7 +53,7 @@ return(
             </Section>
         </Sections>
 
-        <Sections>
+        <Sections id="bebidas">
         <Tag>Bebidas</Tag>
             <Section>  
                 <ProductList>
@@ -66,7 +66,7 @@ return(
             </Section>
         </Sections>
 
-        <Sections>
+        <Sections id="arqueria">
         <Tag>Arqueria</Tag>
             <Section>  
                 <ProductList>
@@ -79,8 +79,8 @@ return(
             </Section>
         </Sections>
 
-        <Sections>
-        <Tag>CAPACETES</Tag>
+        <Sections id="espadas">
+        <Tag>Espadas</Tag>
             <Section>  
                 <ProductList>
                 {Itens.map((item,index) => {
@@ -92,13 +92,13 @@ return(
             </Section>
         </Sections>
 
-        <Sections>
+        <Sections id="outros">
         <Tag>Outros</Tag>
             <Section>  
                 <ProductList>
                 {Itens.map((item,index) => {
                     if(item.category === 'Outros'){
-                     return <Product key={index} id={item.id} img={item.picture} name={item.name} price={item.price}/>
+                     return <Product key={index} id={item._id} img={item.picture} name={item.name} price={item.price}/>
                     }
                 })}
                 </ProductList>
@@ -114,6 +114,7 @@ const Mainframe = styled.main`
     display:flex;
     align-items:center;
     flex-direction:column;
+
 `
 const Tag = styled.p`
 
@@ -142,15 +143,16 @@ const Banner = styled.img`
 
 
 const Sections = styled.div`
-    
+        width: 80%;
+    margin: 0 auto;
     padding-top: 15px;
-    height: 90vh;
     margin-bottom: 25px;
     height: 100%;
 `
 
 
 const Section = styled.div`
+
     background-color: ${cor3};
     padding-left: 10px;
     margin-bottom: 20px;
@@ -162,9 +164,10 @@ const ProductList = styled.div`
     grid-template-columns: repeat(9, 1fr);
     gap: 25px;
     flex-direction:row;
-    width:1568px;
+    width:100%;
+    margin: 0 auto;
     align-items:center;
-    overflow:hidden;
+
     position: relative;
     left: -10px;
     padding-left: 10px;

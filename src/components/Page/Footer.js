@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { cor1, cor2, cor3, cor4, cor6, cor7 } from "../constants/colors";
-import selo1 from "../assets/103388.png";
-import selo2 from "../assets/5847e95fcef1014c0b5e4822.png";
-import selo3 from "../assets/5a902dbf7f96951c82922875.png";
-import selo4 from "../assets/selo-google-site-seguro.png";
-import selo5 from "../assets/selo-ra.png";
-import selo6 from "../assets/selo_ebit_kabum_horizontal.png";
-import selo7 from "../assets/selo_empresabuscape_horizontal.png";
+import { cor1, cor2, cor3, cor4, cor6, cor7 } from "../../constants/colors";
+import selo1 from "../../assets/103388.png";
+import selo2 from "../../assets/5847e95fcef1014c0b5e4822.png";
+import selo3 from "../../assets/5a902dbf7f96951c82922875.png";
+import selo4 from "../../assets/selo-google-site-seguro.png";
+import selo5 from "../../assets/selo-ra.png";
+import selo6 from "../../assets/selo_ebit_kabum_horizontal.png";
+import selo7 from "../../assets/selo_empresabuscape_horizontal.png";
 
 export default function Footer() {
   return (
@@ -88,12 +88,13 @@ const FooterMain = styled.footer`
   height: fit-content;
   background-color: ${cor2};
   bottom: 0;
+  
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   gap: 20%;
-  padding: 18px 5px;
+  padding: 18px;
 
 `
 
@@ -106,6 +107,7 @@ const FootersDiv = styled.div`
   flex-direction: column;
   border-radius: 18px;
   margin-top: 18px;
+  
 `;
 
 const Title = styled.p`

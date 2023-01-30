@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { cor4, cor5, cor7 } from "../constants/colors";
+import { cor4, cor5, cor7 } from "../../constants/colors";
 
 export default function SideBar() {
   return (
@@ -11,14 +11,32 @@ export default function SideBar() {
             <Link to="/login">Minha Conta</Link>
           </div>
           <div>
-            <Link to="/cadastro">Cadastro</Link>
+            <Link to="/cadastro">Cadastrar</Link>
           </div>
-          <div>
-            <Link>Pedidos</Link>
-          </div>
+
           <div>
             <Link to="/carrinho">Carrinho</Link>
           </div>
+          <section></section>
+          <div>
+            <a href="#armaduras">Armaduras</a>
+          </div>
+          <div>
+            <a href="#arqueria">Arqueria</a>
+          </div>
+          <div>
+            <a href="#bebidas">Bebidas</a>
+          </div>
+          <div>
+            <a href="#espadas">Espadas</a>
+          </div>
+          <div>
+            <a href="#machados">Machados</a>
+          </div>
+          <div>
+            <a href="#outros">Outros</a>
+          </div>
+
         </Body>
       </Sidebar>
     </>
@@ -50,4 +68,11 @@ const Body = styled.div`
       color: ${cor4};
     }
   }
+  section {
+    width: 100%;
+    height: 1px;
+    background-color: tan;
+    margin: 10px auto;
+  }
 `;
+

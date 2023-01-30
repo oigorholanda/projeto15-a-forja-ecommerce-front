@@ -25,25 +25,23 @@ export default function Item(prop){
 }
 
 const Product = styled.div`
-
-    margin-top:5px;
-    margin-bottom:5px;
-    box-sizing: border-box; 
-    background-color: ${cor3};
-    width:290px;
+    height: 22vw;
+    width:300px;
+    margin: 5px auto;
     padding: 5px;
-    box-sizing: border-box;
-    border-radius: 5px;
+    background-color: ${cor3};
     display:flex;
     flex-direction:column;
     align-items:center;
-    word-break: break-all;
+    word-break: break-word;
     cursor: pointer;
 
     img{
-        width: 270px;
-        height: 290px;
-        border-radius: 3px;
+        max-width: 100%;
+        height: 75%;
+        object-fit: scale-down;
+        border-radius: 5px;
+        
     }
 
 `
@@ -58,17 +56,16 @@ const ProductName = styled.p`
 
     margin-top:10px;
     font-family: 'Cinzel';
-    font-size: 20px;
-    overflow: hidden; 
+    font-size: 20px; 
     box-sizing: border-box;
     text-overflow: ellipsis;
-    color:${cor5}
+    color:${cor5};
 
 `
 
 const ProductPrice = styled.p`
 
-font-size: 20px;
+    font-size: 20px;
     margin-top: 10px;
     color:white;
 `

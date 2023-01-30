@@ -5,9 +5,9 @@ import PageCheckout from "./components/Checkout/PageCheckoutCard";
 import PageCheckoutAdress from "./components/Checkout/PageCheckoutAdress";
 import Login from "./components/Login";
 import Register from "./components/Register"
-import ProductPage  from "./components/ProductPage"
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import ProductPage  from "./components/Products/ProductPage"
+import Footer from "./components/Page/Footer";
+import Header from "./components/Page/Header";
 import Ops404 from "./components/Ops404";
 import Prod from "./components/Products/Prod"
 

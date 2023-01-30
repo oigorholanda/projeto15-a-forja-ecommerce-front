@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import Like from "../assets/likes.png"
-import YellowStar  from "../assets/yellowstar.png"
+import Like from "../../assets/likes.png"
+import YellowStar  from "../../assets/yellowstar.png"
 import { useNavigate } from 'react-router-dom';
 import { BiCart } from "react-icons/bi"
-import second from "../assets/404second.png"
-import { ClickProduct } from "../services/ProductsRoute.js"
+import second from "../../assets/404second.png"
+import { ClickProduct } from "../../services/ProductsRoute.js"
 
 export default function ProductPage(props){
 

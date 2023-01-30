@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
-import { cor1, cor2, cor3, cor4, cor5, cor6 } from "../constants/colors";
+import logo from "../../assets/logo.png";
+import { cor1, cor2, cor3, cor4, cor5, cor6 } from "../../constants/colors";
 
 export default function Logo({ size }) {
   return (

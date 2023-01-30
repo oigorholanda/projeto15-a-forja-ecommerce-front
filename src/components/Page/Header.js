@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { cor4, cor5, cor7} from "../constants/colors";
+import { cor4, cor5, cor7} from "../../constants/colors";
 import Logo from "./Logo";
 import SideBar from "./Sidebar";
 import {GoThreeBars, GoSearch} from "react-icons/go"
@@ -22,8 +22,8 @@ export default function Header() {
       </nav>
 
       <Search>
-        <input type="text" placeholder="Procure os produtos" />
-        <GoSearch size={30} className="icons" onClick={() => {}}/>
+        <input type="text" placeholder="Procure por produtos" />
+        <GoSearch size={30} className="icons" onClick={() => alert("Em breve...")}/>
       </Search>
 
       <nav>
@@ -78,6 +78,12 @@ const Search = styled.div`
   input {
     width: 90%;
     padding: 7px;
+    border: none;
+    background-color: tan;
+    border-radius: 5px;
+    &::placeholder {
+      color: darkslategray;
+    }
   }
 `;
 
