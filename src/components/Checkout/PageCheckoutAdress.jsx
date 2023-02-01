@@ -64,7 +64,7 @@ export default function App() {
         
         <div><input id='pwd' name="pwd" placeholder="Complemento" type="text" {...register("details", {required:false})} /></div>
         {errors.password && <div>Digite um complemento válido</div>}
-    <SubmitBtn> <input value="Finalizar pedido" style={{background: "#ffa375", color:'white'}} type="submit" /></SubmitBtn>
+        <SubmitBtn value="Finalizar pedido" type="submit">Finalizar Pedido</SubmitBtn>
     </form>
         </div>
          

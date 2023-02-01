@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { cor4, cor5 } from "../../constants/colors";
 
 
 export const Container = styled.div`
@@ -36,10 +37,18 @@ export const Container = styled.div`
     
 `
 
-export const SubmitBtn = styled.div`
-    input{
-        border: none;
-    }
+export const SubmitBtn = styled.button`
+    width: 100%;
+    height: 44px;
+    color: ${cor4};
+    border: 2px solid ${cor4};
+    background: ${cor5} !important;
+    border-radius: 8px;
+    font-family: "Cinzel";
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
 `
 
 export const CheckoutConfirm = styled.div`

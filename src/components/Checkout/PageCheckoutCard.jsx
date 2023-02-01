@@ -60,7 +60,7 @@ export default function App() {
         <div><input id='pwd' name="pwd" placeholder="validade" type="month" {...register("expirationDate", { required: true })} /></div>
         {errors.password && <div>Insira uma validade</div>}
         </LowerContainer>
-    <SubmitBtn> <input value="Cadastrar" style={{background:"#ffa375", color:'white'}} type="submit" /></SubmitBtn>
+        <SubmitBtn value="Cadastrar" type="submit">Cadastrar</SubmitBtn>
     </form>
         </div>
         </Container>

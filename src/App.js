@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
-import Cart from "./components/Card/Cart";
+import Cart from "./components/Cart/Cart";
 import PageCheckout from "./components/Checkout/PageCheckoutCard";
 import PageCheckoutAdress from "./components/Checkout/PageCheckoutAdress";
 import Login from "./components/Login";
