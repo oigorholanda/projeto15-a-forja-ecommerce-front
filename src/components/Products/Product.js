@@ -19,7 +19,7 @@ export default function Item(prop){
             <Product onClick={Popup}>
                         <img src={prop.img} alt="Imagem produto" />
                                 <ProductName>{prop.name}</ProductName>
-                                <ProductPrice>oz. {prop.price}</ProductPrice>    
+                                <ProductPrice>R$ {prop.price}</ProductPrice>    
             </Product>
     )
 }

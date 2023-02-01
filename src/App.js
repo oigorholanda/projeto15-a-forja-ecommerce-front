@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
-import Cart from "./components/Cart";
+import Cart from "./components/Card/Cart";
 import PageCheckout from "./components/Checkout/PageCheckoutCard";
 import PageCheckoutAdress from "./components/Checkout/PageCheckoutAdress";
 import Login from "./components/Login";
@@ -27,7 +27,7 @@ export default function App() {
           <Route path="/carrinho" element={<Cart/>} />
           <Route path="/checkout-card" element={<PageCheckout/>} />
           <Route path="/checkout-adress" element={<PageCheckoutAdress/>} />
-          <Route path="/404" element={<Ops404/>} />
+          <Route path="/*" element={<Ops404/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

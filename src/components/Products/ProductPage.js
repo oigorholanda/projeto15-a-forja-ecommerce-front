@@ -1,10 +1,9 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 import styled from 'styled-components';
 import Like from "../../assets/likes.png"
 import YellowStar  from "../../assets/yellowstar.png"
 import { useNavigate } from 'react-router-dom';
 import { BiCart } from "react-icons/bi"
-import second from "../../assets/404second.png"
 import { ClickProduct, SelectedProduct } from "../../services/ProductsRoute.js"
 import { AuthContext } from '../../contexts/AuthContext';
 import axios from 'axios';
@@ -17,9 +16,8 @@ export default function ProductPage(props){
     const [Descri, setDescri] = useState("404")
     const [Catego, setCatego] = useState("404")
     const [ID, setID] = useState()
-    // const {Token } = useContext(AuthContext);
+    const { Token } = useContext(AuthContext);
     const navigate = useNavigate();
-    const url = process.env.REACT_APP_API_URL
 
     const catchProducts = async () => {
 
@@ -37,14 +35,13 @@ export default function ProductPage(props){
 
     async function CartAdd(){
     const body = {id: ID}
-    const Token = "5702bdae-8c1b-4c17-a888-d6b968bc2178"
     console.log(body);
     const config = {
         headers: {Authorization: Token}
         }
             
         
-        const promisse = axios.post(`${url}/cart`, body, config)
+        const promisse = axios.post(`${process.env.REACT_APP_API_URL}/cart`, body, config)
         promisse.then(() => navigate("/carrinho"))
         promisse.catch((error) => {
             console.log(error.response)
@@ -73,11 +70,11 @@ export default function ProductPage(props){
                     <p>Ou em 1x no cartão com até 5% OFF</p>
                     <p>Vendido e entregue por: A Forja! | Em estoque</p>
                     <ConteinerStars>
-                        <img src={YellowStar}/>
-                        <img src={YellowStar}/>
-                        <img src={YellowStar}/>
-                        <img src={YellowStar}/>
-                        <img src={YellowStar}/>
+                        <img src={YellowStar} alt="star"/>
+                        <img src={YellowStar} alt="star"/>
+                        <img src={YellowStar} alt="star"/>
+                        <img src={YellowStar} alt="star"/>
+                        <img src={YellowStar} alt="star"/>
                     </ConteinerStars>
                     <BuyButton onClick={CartAdd}><BiCart size={40}/>COMPRAR</BuyButton>
                 </ConteinerRight>

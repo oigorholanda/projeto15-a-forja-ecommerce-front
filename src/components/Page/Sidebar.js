@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { cor4, cor5, cor7 } from "../../constants/colors";
+import { HashLink } from "react-router-hash-link";
 
 export default function SideBar() {
   return (
@@ -19,22 +20,22 @@ export default function SideBar() {
           </div>
           <section></section>
           <div>
-            <a href="#armaduras">Armaduras</a>
+            <HashLink smooth to="/#armaduras">Armaduras</HashLink>
           </div>
           <div>
-            <a href="#arqueria">Arqueria</a>
+            <HashLink smooth to="/#arqueria">Arqueria</HashLink>
           </div>
           <div>
-            <a href="#bebidas">Bebidas</a>
+            <HashLink smooth to="/#bebidas">Bebidas</HashLink>
           </div>
           <div>
-            <a href="#espadas">Espadas</a>
+            <HashLink smooth to="/#espadas">Espadas</HashLink>
           </div>
           <div>
-            <a href="#machados">Machados</a>
+            <HashLink smooth to="/#machados">Machados</HashLink>
           </div>
           <div>
-            <a href="#outros">Outros</a>
+            <HashLink smooth to="/#outros">Outros</HashLink>
           </div>
 
         </Body>

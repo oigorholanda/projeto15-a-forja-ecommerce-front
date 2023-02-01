@@ -17,7 +17,6 @@ export function reciveProducts() {
 export function ClickProduct() {
 
     const { idClicked } = useContext(AuthContext);
-    console.log(idClicked)
     const response = axios.get(`${url}/product/${idClicked}`)
     return response
 }
