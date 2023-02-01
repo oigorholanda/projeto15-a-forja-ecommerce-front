@@ -10,16 +10,14 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function App() {
-    const url =  "http://localhost:5000"
+    const url = process.env.REACT_APP_API_URL
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const token = "5a284611-1be4-42f9-a3f3-0e196394b29e"
-    const id = "63d529ed943a7ff029a61e4b"
-
-    // const { token, id } = useContext(AuthContext);
+    const { token, id } = useContext(AuthContext);
     const navigate = useNavigate()
 
     
-    function onSubmit(data){
+    async function onSubmit(data){
+        
         data.id = id
         const config = {
             headers: {
@@ -33,11 +31,7 @@ export default function App() {
             return error.response;
         });
     };
-
-    // console.log(config)
-    // const savedAdress = axios.get(`${url}/shipmentinfo`, id, config)
-    // savedAdress.then(console.log)
-    // savedAdress.catch(console.log)
+    
 
   
     return(

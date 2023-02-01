@@ -8,7 +8,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 
 export default function App() {
     const [finalized, setFinalized] = useState(false);
-    const url =  "http://localhost:5000"
+    const url = process.env.REACT_APP_API_URL
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const { token, id } = useContext(AuthContext);
     console.log(token, id)
@@ -41,7 +41,7 @@ export default function App() {
         </Title>
         <Description>
        
-        <div><h3> Preco:</h3> <h3>&emsp;&nbsp;R$</h3> <br/></div>
+        <div><h3> insira seu cartão:</h3> <h3>&emsp;&nbsp;</h3> <br/></div>
         
         </Description>
         <div>
