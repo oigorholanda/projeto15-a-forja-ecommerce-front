@@ -4,12 +4,13 @@ export const AuthContext = createContext({})
 
 function AuthProvider({children}){
 
-    const [Token, setToken] = useState(["5702bdae-8c1b-4c17-a888-d6b968bc2178"]);
-    const [finishingCart, setFinishingCart] = useState({});
-    const [idClicked, setClicked] = useState()
+    const [Token, setToken] = useState([]);
+    const [backProduct, setBackProduct] = useState(false);
+    const [username, setUsername] = useState();
+    const [idClicked, setClicked] = useState();
     
     return(
-        <AuthContext.Provider value={{Token,setToken,finishingCart, setFinishingCart,idClicked, setClicked}}>
+        <AuthContext.Provider value={{Token, setToken, backProduct, setBackProduct, idClicked, setClicked, username, setUsername}}>
             {children}
         </AuthContext.Provider>
     )

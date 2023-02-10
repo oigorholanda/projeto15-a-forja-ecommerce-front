@@ -1,18 +1,16 @@
-import styled from "styled-components";
 import { useForm } from "react-hook-form";
 import { Container, Title, Description, LowerContainer, SubmitBtn } from "./CheckoutStyles";
-import { SendAdress } from "../../services/CheckoutAdressRoute";
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { base_url } from "../../constants/urls";
 
 
 
 export default function App() {
-    const url = process.env.REACT_APP_API_URL
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const { token, id } = useContext(AuthContext);
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { Token, id } = useContext(AuthContext);
     const navigate = useNavigate()
 
     
@@ -21,10 +19,10 @@ export default function App() {
         data.id = id
         const config = {
             headers: {
-                Authorization: token,
+                Authorization: Token,
             }
           }
-        const response = axios.post(`${url}/shipmentinfo`, data, config)
+        const response = axios.post(`${base_url}/shipmentinfo`, data, config)
         response.then(() => navigate("/checkout-card"))
         response.catch((error) => {
             console.log(error.response)

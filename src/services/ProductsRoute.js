@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useContext } from "react";
+import { base_url } from "../constants/urls.js";
 import { AuthContext } from "../contexts/AuthContext.js"
 
-const url = process.env.REACT_APP_API_URL
+
 
 export function reciveProducts() {
 
-    const response = axios.get(`${url}/products`)
+    const response = axios.get(`${base_url}/products`)
     .catch((error) => {
       return error.response;
     });
@@ -17,14 +18,21 @@ export function reciveProducts() {
 export function ClickProduct() {
 
     const { idClicked } = useContext(AuthContext);
-    const response = axios.get(`${url}/product/${idClicked}`)
+    const response = axios.get(`${base_url}/product/${idClicked}`)
     return response
 }
 
-export function SelectedProduct() {
-  // Enviar o token e o ID do produto para cadastro
-  const { token } = useContext(AuthContext);
-  console.log(token)
-  const response = axios.post(`${url}/cart`)
-  return response
-}
+// export function SelectedProduct(body) {
+//   // Enviar o token e o ID do produto para cadastro
+//   const { Token } = useContext(AuthContext);
+//   const config = {
+//     headers: { Authorization: Token },
+//   };
+//   const response = axios.post(`${base_url}/cart`, body, config)
+//   .catch((error) => {
+//     console.log(error.response);
+//       if (error.response.status === 401) {navigate("/login");}
+//       return error.response;
+//   })
+//   return response
+// }

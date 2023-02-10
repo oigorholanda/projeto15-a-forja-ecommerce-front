@@ -1,28 +1,26 @@
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Container, Title, Description, LowerContainer, SubmitBtn, CheckoutConfirm} from "./CheckoutStyles";
 import axios from "axios";
 import { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import { base_url } from "../../constants/urls";
 
 export default function App() {
     const [finalized, setFinalized] = useState(false);
-    const url = process.env.REACT_APP_API_URL
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const { token, id } = useContext(AuthContext);
-    console.log(token, id)
     const navigate = useNavigate()
 
     function onSubmit(data){
         data.id = id
-        console.log(data, token)
         const config = {
             headers: {
               Authorization: token,
             }
           }
-        const response = axios.post(`${url}/paymentinfo`, data, config)
+        const response = axios.post(`${base_url}/paymentinfo`, data, config)
         response.then(() => setFinalized(true))
         response.catch((error) => {
             console.log(error.response)

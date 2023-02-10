@@ -1,10 +1,10 @@
 import axios from "axios";
+import { base_url } from "../constants/urls";
 
-const url = process.env.REACT_APP_API_URL
 
 // LOGIN AUTH
 export function signIn(body) {
-  const response = axios.post(`${url}/sign-in`, body)
+  const response = axios.post(`${base_url}/sign-in`, body)
   .catch((error) => {
     return error.response;
   });
@@ -13,6 +13,6 @@ export function signIn(body) {
 
 // REGISTER AUTH
 export function signUp(body) {
-  const response = axios.post(`${url}/sign-up`, body);
+  const response = axios.post(`${base_url}/sign-up`, body);
   return response;
 }

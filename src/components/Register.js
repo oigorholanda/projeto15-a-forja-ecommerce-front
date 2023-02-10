@@ -15,7 +15,7 @@ export default function Signup() {
   
       function handleSendForm (event) {
           event.preventDefault();
-          console.log(form)
+          
           if(!form.name || !form.email || !form.password){
             return alert("Preencha os campos corretamente");
           }
@@ -23,7 +23,7 @@ export default function Signup() {
           signUp(form).then((res) => {
             console.log(res)
             alert("Registrado com sucesso!")
-            navigate("/signin");
+            navigate("/login");
           })
           .catch((err) => {
            err.response.data.map((e) => {
@@ -49,15 +49,15 @@ export default function Signup() {
                 <ContainerBot>
                     <TextPass>Nome</TextPass>
                     <Senha placeholder="Digite seu nome" name="name" type="text"
-         onChange={(name) => handleForm({ name: name.target.name, value: name.target.value})}>
+         onChange={(name) => handleForm({ name: name.target.name, value: name.target.value })}>
          </Senha>
                     <TextEmail>Email</TextEmail>
                     <Email placeholder="Digite seu e-mail" name="email" type="email"
-        onChange={(email) => handleForm({name: email.target.name,value: email.target.value, })}>
+        onChange={(email) => handleForm({ name: email.target.name, value: email.target.value })}>
         </Email>
                     <TextPass>Senha</TextPass>
                     <Senha placeholder="Digite sua senha" name="password" type="password" 
-                    onChange={(e) => handleForm({name: e.target.name, value: e.target.value,})}>
+                    onChange={(e) => handleForm({ name: e.target.name, value: e.target.value })}>
                     </Senha>
                 <Entrar onClick={handleSendForm}><p>REGISTRAR-SE</p></Entrar>
                 <Or>Ou</Or>

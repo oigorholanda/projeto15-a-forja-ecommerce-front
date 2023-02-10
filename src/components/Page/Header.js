@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styled from "styled-components";
 import { cor4, cor5, cor7} from "../../constants/colors";
 import Logo from "./Logo";
@@ -6,9 +6,11 @@ import SideBar from "./Sidebar";
 import {GoThreeBars, GoSearch} from "react-icons/go"
 import {BiUserCircle, BiCart} from "react-icons/bi"
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { username } = useContext(AuthContext);
   const navigate = useNavigate();
 
   window.scrollTo(0, 0);
@@ -28,10 +30,11 @@ export default function Header() {
 
       <nav>
       <BiUserCircle size={35} className="icons" onClick={() => navigate("/login")}/>
-      <p>
+       {username? <p>{`Olá, ${username}!`}</p> : 
+       <p>
         Faça seu <span onClick={() => navigate("/login")}>Login</span>
         <br /> ou <span onClick={() => navigate("/cadastro")}>Cadastre-se</span>
-      </p>
+      </p>}
       </nav>
 
       <BiCart size={40} className="icons" onClick={() => navigate("/carrinho")}/>

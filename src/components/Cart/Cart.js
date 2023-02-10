@@ -1,22 +1,22 @@
 import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
-import { BiCart, BiTrash } from "react-icons/bi";
-import { Link, useNavigate } from "react-router-dom";
-import { cor1, cor2, cor3, cor4, cor5, cor6, cor7 } from "../../constants/colors";
+import { BiCart } from "react-icons/bi";
+import { Link } from "react-router-dom";
+import { cor1, cor4, cor5 } from "../../constants/colors";
 import axios from "axios";
 import { AuthContext } from "../../contexts/AuthContext";
 import CartProduct from "./CartProduct";
+import { base_url } from "../../constants/urls";
 
 export default function Cart() {
   const [cart, setCart] = useState([]);
   const [totalBalance, setTotalBalance] = useState(0);
   const [reload, setReload] = useState(false)
   const { Token } = useContext(AuthContext);
-  const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/cart`, {
+      .get(`${base_url}/cart`, {
         headers: {
           Authorization: `Bearer ${Token}`,
         },
@@ -55,7 +55,7 @@ export default function Cart() {
             </div>
             <div>
               <p>Frete:</p>
-              <p>{(totalBalance.toFixed()-totalBalance+4+cart.length).toFixed(2)}</p>
+              <p>{(totalBalance.toFixed()-totalBalance+3*cart.length).toFixed(2)}</p>
             </div>
             <div>
               <em>Total:</em>

@@ -3,6 +3,7 @@ import { BiTrash } from "react-icons/bi";
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import { base_url } from "../../constants/urls";
 
 export default function CartProduct(props) {
     const { Token } = useContext(AuthContext);
@@ -12,7 +13,7 @@ export default function CartProduct(props) {
     function removeItem(id) {
         
         axios
-      .delete(`${process.env.REACT_APP_API_URL}/cart/${id}`, {
+      .delete(`${base_url}/cart/${id}`, {
         headers: {
           Authorization: `Bearer ${Token}`,
         },
