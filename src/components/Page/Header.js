@@ -29,7 +29,7 @@ export default function Header() {
       </Search>
 
       <nav>
-      <BiUserCircle size={35} className="icons" onClick={() => navigate("/login")}/>
+      <BiUserCircle size={35} className="icons" onClick={() => navigate("/profile")}/>
        {username? <p>{`Olá, ${username}!`}</p> : 
        <p>
         Faça seu <span onClick={() => navigate("/login")}>Login</span>

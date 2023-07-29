@@ -10,6 +10,7 @@ import Footer from "./components/Page/Footer";
 import Header from "./components/Page/Header";
 import Ops404 from "./components/Ops404";
 import Prod from "./components/Products/Prod"
+import Profile from "./components/Profile";
 
 export default function App() {
 
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/carrinho" element={<Cart/>} />
           <Route path="/checkout-card" element={<PageCheckout/>} />
           <Route path="/checkout-adress" element={<PageCheckoutAdress/>} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="/*" element={<Ops404/>} />
         </Routes>
         <Footer />
