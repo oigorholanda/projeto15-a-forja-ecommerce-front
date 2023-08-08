@@ -1,6 +1,6 @@
 # A Forja - sua loja médiaval
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Medieval ecommerce for practice react SPA and integrating with mongoDB(Atlas)
 
 ## Available Scripts
 
