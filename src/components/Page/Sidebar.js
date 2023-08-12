@@ -45,12 +45,14 @@ export default function SideBar() {
 }
 
 const Sidebar = styled.div`
-  width: 15vw;
+  width: 14vw;
+  height: max-content;
   background-color: ${cor7};
   position: absolute;
-  top: 150px;
+  top: 140px;
   left: 0vh;
   margin-right: -270px;
+  border-radius: 0px 0px 50px 0px;
   padding: 20px;
   font-size: 1.5vw;
   font-family: "Texturina", serif;
