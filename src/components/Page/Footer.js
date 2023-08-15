@@ -14,20 +14,20 @@ export default function Footer() {
       <FooterMain>
         <FootersDiv>
           <Title>Institucional</Title>
-          <Pages>Central de ajuda.</Pages>
-          <Pages>Garantia.</Pages>
-          <Pages>Devoluções.</Pages>
-          <Pages>Metódos de pagamento.</Pages>
-          <Pages>Como comprar.</Pages>
+          <Pages>Central de ajuda</Pages>
+          <Pages>Garantia</Pages>
+          <Pages>Devoluções</Pages>
+          <Pages>Metódos de pagamento</Pages>
+          <Pages>Como comprar</Pages>
         </FootersDiv>
         <FootersDiv>
           <Title>Siga as redes</Title>
-          <Pages>Facebook.</Pages>
-          <Pages>Instagram.</Pages>
-          <Pages>Twitter.</Pages>
-          <Pages>Linkedin.</Pages>
-          <Pages>Aplicativo Android.</Pages>
-          <Pages>Aplicativo IOS.</Pages>
+          <Pages>Facebook</Pages>
+          <Pages>Instagram</Pages>
+          <Pages>Twitter</Pages>
+          <Pages>Linkedin</Pages>
+          <Pages>Aplicativo Android</Pages>
+          <Pages>Aplicativo IOS</Pages>
         </FootersDiv>
         <FootersDiv>
           <Title>Atendimento</Title>
