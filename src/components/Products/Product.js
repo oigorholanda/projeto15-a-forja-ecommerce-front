@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { cor3, cor5 } from "../../constants/colors";
+import { cor1, cor3, cor5 } from "../../constants/colors";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -23,7 +23,7 @@ export default function Item(prop) {
 }
 
 const Product = styled.div`
-  height: 22vw;
+  height: 400px;
   width: 300px;
   margin: 5px auto;
   padding: 5px;
@@ -32,13 +32,24 @@ const Product = styled.div`
   flex-direction: column;
   align-items: center;
   word-break: break-word;
+  border: solid 1px;
+  border-color: ${cor1};
+  padding: 15px;
   cursor: pointer;
-
+  border-radius: 15px;
   img {
-    max-width: 100%;
-    height: 75%;
-    object-fit: scale-down;
-    border-radius: 5px;
+    object-fit: cover;
+    max-width: 270px;
+    height: 70%;
+    border-radius: 10px;
+  }
+  @media (min-width: 2560px) {
+    height: 600px;
+    width: 440px;
+    img {
+      max-width: 400px;
+      height: 70%;
+    }
   }
 `;
 
