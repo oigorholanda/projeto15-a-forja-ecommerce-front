@@ -43,6 +43,14 @@ const Product = styled.div`
     height: 70%;
     border-radius: 10px;
   }
+  @media (min-width: 2560px) {
+    height: 600px;
+    width: 440px;
+    img {
+      max-width: 400px;
+      height: 70%;
+    }
+  }
 `;
 
 const ProductName = styled.p`
