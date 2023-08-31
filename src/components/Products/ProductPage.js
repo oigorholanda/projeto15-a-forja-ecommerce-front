@@ -109,7 +109,7 @@ const ConteinerAll = styled.main`
   padding: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const IniDesc = styled.p`
@@ -120,7 +120,6 @@ const IniDesc = styled.p`
   font-size: 18px;
   line-height: 125%;
   text-align: justify;
-  margin-right: 15px;
   color: #873e16 !important;
 `;
 
@@ -129,6 +128,9 @@ const ConterinerLeft = styled.div`
   height: 800px;
   display: flex;
   flex-direction: column;
+  p {
+    margin-left: 30px;
+  }
 `;
 const PicProduct = styled.img`
   margin: 30px;
