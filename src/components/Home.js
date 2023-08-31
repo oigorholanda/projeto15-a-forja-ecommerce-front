@@ -1,11 +1,11 @@
-import Product from "./Product";
+import Product from "./Products/Product";
 import styled from "styled-components";
-import { cor2, cor3 } from "../../constants/colors";
-import BannerFrontal from "../../assets/Banner para loja de eletrônicos smartwatch desconto preto e vermelho.png";
-import { reciveProducts } from "../../services/ProductsRoute.js";
+import { cor2, cor3 } from "../constants/colors";
+import BannerFrontal from "../assets/Banner para loja de eletrônicos smartwatch desconto preto e vermelho.png";
+import { reciveProducts } from "../services/ProductsRoute.js";
 import { useEffect, useState } from "react";
 
-export default function Productss() {
+export default function Home() {
   const [Itens, setItens] = useState([]);
 
   useEffect(() => {

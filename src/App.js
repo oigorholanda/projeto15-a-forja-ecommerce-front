@@ -9,7 +9,7 @@ import ProductPage  from "./components/Products/ProductPage"
 import Footer from "./components/Page/Footer";
 import Header from "./components/Page/Header";
 import Ops404 from "./components/Ops404";
-import Prod from "./components/Products/Prod"
+import Home from "./components/Home"
 import Profile from "./components/Profile";
 
 export default function App() {
@@ -21,7 +21,7 @@ export default function App() {
       <BrowserRouter>
       <Header />
         <Routes>
-          <Route path="/" element={<Prod/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/cadastro" element={<Register />} />
           <Route path="/produto/:id" element={<ProductPage/>} />

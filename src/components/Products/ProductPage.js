@@ -4,7 +4,7 @@ import Like from "../../assets/likes.png";
 import YellowStar from "../../assets/yellowstar.png";
 import { useNavigate } from "react-router-dom";
 import { BiCart } from "react-icons/bi";
-import { ClickProduct, SelectedProduct } from "../../services/ProductsRoute.js";
+import { ClickProduct } from "../../services/ProductsRoute.js";
 import { AuthContext } from "../../contexts/AuthContext";
 import axios from "axios";
 import { base_url } from "../../constants/urls";
