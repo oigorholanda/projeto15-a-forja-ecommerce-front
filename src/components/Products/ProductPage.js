@@ -104,8 +104,9 @@ const Main = styled.div`
 
 const ConteinerAll = styled.main`
   margin-top: 30px;
-  width: 1400px;
+  width: 100%;
   height: 800px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
